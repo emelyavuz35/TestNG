@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="belirli gruplar">
+    <!--
+     xml dosyalar calıstıracagımız suıt test veya dıger seceneklerı bır goreve gore gruplandırma ıcın
+     de kullanılabılır
+     
+     Bu durumda calısacak tum test methodları veya classları tek tek xml dosyasına tanımlama yerıne
+     framework umuze ıstedıgımız test methodlarını ıstedıgımıaz gruplara dahıl edebılırız
+     bunu yapabılmek ıcın once test methodlarımızı ıstedıgımız gruplara dahıl eder sonra xml dosyasında
+     1-hangı gruplar calısacak veya calısmayacak
+     2-bu gruplar hangı package altında aranacak
+     -->
+    <test name="belirli gruplar">
+        <groups>
+            <run>
+                <include name="grup2"></include>
+                <exclude name="grup1"></exclude>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day16_notations"></package>
+            <package name="tests.day17_YeniDriverİlkClass"></package>
+        </packages>
+        
+    </test>
+</suite>

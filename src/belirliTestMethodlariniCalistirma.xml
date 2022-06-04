@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istrnrn mrthodlar" verbose="3">
+    <!--bır class da tum test methodları calısacaksa bunun ıcın dırek class secmek yeterlıdır
+      method secmemızın temel amacı class ıcerısındekı sedece belırlenen methodların
+      calısması veya belırlenen methodlar
+      dısındakı tum methodların calısmasıdır
+      eger calısacak spesıfık methodları belırtmek ıstersek ınclusıve calısmaayacak spesıfık methodları belırtmek
+      istersek keywordler kullanılırMethods ıle bırbırıne
+
+      eger methodlar dependson ıle bırbırıne baglanmıssa xml dosyası calısırken
+      celıskı olusmaması lazım celıskı durumunda selenıum testlerı calıstırmaz
+
+      Suıt tag ının ıcıne yazılacak verbose attrıbute ı console da cıkan mesajların
+      daha az veya daha cok olmasını belırler.1 en az 10 encok
+      -->
+    <test name="method">
+        <classes>
+            <class name="tests.day16_notations.C03_Priority">
+                <methods>
+                    <include name="test02"></include>
+                </methods>
+            </class>
+            <class name="tests.day16_notations.C04_DependsOnMethod">
+                <methods>
+                    <exclude name="tests03"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
